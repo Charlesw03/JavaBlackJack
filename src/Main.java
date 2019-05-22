@@ -32,6 +32,28 @@ public class Main {
             return new StringBuilder(name).reverse().toString();
         }
 
+        public static int[] arr = {3,6,2,4,5,1,0,1,8,8,8675309};
+        public static int[] bubbleSort( int[] arr){
+//            this.arr = arr;
+            boolean flag = false;
+            while(flag){
+                flag = false;
+                for (int i = 0; i <arr.length-1 ; i++) {
+                        if(arr[i]>arr[i+1]){
+                            int temp = arr[i];
+                            arr[i] = arr[i+1];
+                            arr[i+1] = temp;
+                        }
+                }
+
+            }
+            return arr;
+        }
+
+
+
+
+
         public static String s = "welcometojava";
         public static int k = 3;
         public static String getSmallestAndLargest(String s, int k) {
@@ -63,6 +85,7 @@ public class Main {
             System.out.println(rev1(name));
             System.out.println(rev2(name2));
             System.out.println(getSmallestAndLargest(s,k));
+            System.out.println(bubbleSort(arr).toString());
 
         }
 
